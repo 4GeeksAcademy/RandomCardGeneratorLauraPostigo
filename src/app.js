@@ -14,7 +14,18 @@ window.onload = function() {
 
   let selectedPalo = palo[randomPaloIndex];
   let selectedValue = value[randomValueIndex];
+
   document.querySelector(
     ".card-mid"
   ).textContent = `${selectedValue} ${selectedPalo}`;
+
+  document.querySelector(".top-left .value").textContent = selectedValue;
+  document.querySelector(".top-left .suit").textContent = selectedPalo;
+  document.querySelector(".bottom-right .value").textContent = selectedValue;
+  document.querySelector(".bottom-right .suit").textContent = selectedPalo;
+
+  let color = selectedPalo === "♥" || selectedPalo === "♦" ? "red" : "black";
+  document.querySelectorAll(".corner, .card-mid").forEach(el => {
+    el.style.color = color;
+  });
 };

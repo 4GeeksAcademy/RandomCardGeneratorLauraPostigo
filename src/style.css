@@ -57,3 +57,11 @@ body {
 .suit {
   font-size: 12px;
 }
+.card-mid {
+  font-size: 50px; /* Ajusta el tamaño del contenido central */
+  color: black; /* Cambia dinámicamente con los palos rojos o negros */
+  display: flex; /* Centra el contenido */
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1; /* Ocupa el espacio disponible */
+}
